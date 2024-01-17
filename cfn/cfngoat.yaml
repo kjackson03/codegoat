@@ -43,6 +43,10 @@ Resources:
       Tags: 
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-ec2" 
+        - Key: git_repo
+          Value: codegoat
+        - Key: git_org
+          Value: kjackson03
       UserData: 
         Fn::Base64: |
           #!/bin/bash
@@ -59,7 +63,6 @@ Resources:
   ############
   ###  S3  ###
   ############
-
   DataBucket:
     # Public, not encrypted, no access logs, no versioning
     # checkov:skip=CKV_AWS_56: not needed
@@ -71,6 +74,10 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub "${AWS::AccountId}-${CompanyName}-${Environment}-data"
+        - Key: git_repo
+          Value: codegoat
+        - Key: git_org
+          Value: kjackson03
 
 Outputs:
   EC2PublicDNS:

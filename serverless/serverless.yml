@@ -20,6 +20,8 @@ functions:
     tags:
       RESOURCE: lambda
       PUBLIC: false
+      git_org: kjackson03
+      git_repo: codegoat
     iamRoleStatements:
       - Effect: Allow
         Action:
