@@ -21,6 +21,7 @@ jobs:
         id: Checkov
         uses: bridgecrewio/checkov-action@master
         with:
+          framework: bicep
           directory: '.'
           soft_fail: true
           api-key: ${{ secrets.BC_API_KEY }}
