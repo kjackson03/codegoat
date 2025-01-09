@@ -22,7 +22,7 @@ jobs:
         id: Checkov
         uses: bridgecrewio/checkov-action@master
         with:
-          config-file: ./checkov-config.yaml
+          config_file: ./checkov-config.yaml
       - name: Expose report
         uses: actions/upload-artifact@v3
         with:
