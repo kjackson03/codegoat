@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Prisma Cloud
     env:
+      BC_API_KEY: ${{ secrets.BC_API_KEY }}
       PRISMA_API_URL: https://api0.prismacloud.io/
     steps:
       - name: Checkout repo
@@ -21,9 +22,7 @@ jobs:
         id: Checkov
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: '.'
-          soft_fail: true
-          api-key: ${{ secrets.BC_API_KEY }}
+          config-file: ./checkov-config.yaml
       - name: Expose report
         uses: actions/upload-artifact@v3
         with:
