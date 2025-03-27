@@ -4,7 +4,7 @@ resource storageAccountExisting 'Microsoft.Storage/storageAccounts@2021-08-01' e
 }
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
-  name: 'new'
+  name: 'hello'
 }
 
 resource serverDefault 'Microsoft.Sql/servers@2021-02-01-preview' = {
