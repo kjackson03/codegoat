@@ -24,7 +24,7 @@ jobs:
         with:
           config_file: ./checkov-config.yaml
       - name: Expose report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: SARIF results
           path: results.sarif
