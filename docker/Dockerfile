@@ -1,4 +1,4 @@
-FROM  python:3.12.12-trixie
+FROM  python:3.12-slim
 
 LABEL foo="bar baz"
 ADD http://example.com/package.zip /temp
