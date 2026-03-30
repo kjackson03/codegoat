@@ -8,7 +8,7 @@ Parameters:
   Environment: 
     Description: Environment
     Type: String
-    Default: dev
+    Default: test
   DBName:
     Description: Name of the Database
     Type: String
